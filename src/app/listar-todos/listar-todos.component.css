@@ -1,0 +1,29 @@
+body {
+  padding: 14px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+  width: 100%;
+  margin: 20px auto;
+  table-layout: auto;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.fixed {
+  table-layout: fixed;
+}
+
+table,
+td,
+th {
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 10px;
+  border: solid 1px;
+  text-align: center;
+}

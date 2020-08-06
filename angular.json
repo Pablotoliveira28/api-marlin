@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "api-marlin"
+    }
+  },
+  "defaultProject": "api-marlin",
+  "cli": {
+    "analytics": "33f91642-d1cc-4836-8a31-f34cda4f4d9d"
+  }
 }

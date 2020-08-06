@@ -1,0 +1,22 @@
+<a routerLink="/novo">Novo</a>
+
+<table>
+  <thead>
+    <tr>
+      <th>User Id</th>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Completed</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let l of lista">
+      <td>{{ l.userId }}</td>
+      <td>{{ l.id }}</td>
+      <td>{{ l.title }}</td>
+      <td>{{ l.completed }}</td>
+      <td><a [routerLink]="['/view', l.id]">Visualizar</a></td>
+    </tr>
+  </tbody>
+</table>

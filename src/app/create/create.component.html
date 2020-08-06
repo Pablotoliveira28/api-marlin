@@ -1,0 +1,20 @@
+<p>create works!</p>
+<form [formGroup]="form">
+  <div>
+    <input type="number" id="userId" formControlName="userId" />
+    <label for="userId">ID do Usuário</label>
+  </div>
+  <div>
+    <input type="text" id="title" formControlName="title" />
+    <label for="title">Título</label>
+  </div>
+  <div>
+    <select id="completed" formControlName="completed">
+      <option value="true">Sim</option>
+      <option value="false">Não</option>
+    </select>
+    <label for="completed">Completo</label>
+  </div>
+
+  <div><button (click)="submit()">Salvar</button></div>
+</form>
