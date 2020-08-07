@@ -1,22 +1,30 @@
-<a routerLink="/novo">Novo</a>
+<header>
+  <div class="head"><span>Cadastrar novo</span><a routerLink="/novo"><img class="iconPlus"
+        src="../assets/icons/plus.png" /></a>
+  </div>
+</header>
 
-<table>
-  <thead>
-    <tr>
-      <th>User Id</th>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Completed</th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let l of lista">
-      <td>{{ l.userId }}</td>
-      <td>{{ l.id }}</td>
-      <td>{{ l.title }}</td>
-      <td>{{ l.completed }}</td>
-      <td><a [routerLink]="['/view', l.id]">Visualizar</a></td>
-    </tr>
-  </tbody>
-</table>
+<main>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>User Id</th>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Completed</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let l of lista">
+          <td>{{ l.userId }}</td>
+          <td>{{ l.id }}</td>
+          <td>{{ l.title }}</td>
+          <td><img class="icon" src="{{setaCorDoStatusNaTabela(l.completed)}}" /></td>
+          <td><a [routerLink]="['/view', l.id]"><img class="icon" src="../assets/icons/lupa.png" /></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

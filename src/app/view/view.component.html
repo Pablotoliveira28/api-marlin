@@ -1,13 +1,20 @@
-<a routerLink="/listar">Voltar</a>
-<div>
-  <span>Id do Usuários</span> <span>{{ model?.userId }}</span>
-</div>
-<div>
-  <span>Id</span> <span>{{ model?.id }}</span>
-</div>
-<div>
-  <span>Título</span> <span>{{ model?.title }}</span>
-</div>
-<div>
-  <span>Completo</span> <span>{{ model?.completed }}</span>
-</div>
+<header>
+  <div class="head"><span>Voltar</span><a routerLink="/listar"><img class="iconBack"
+        src="../assets/icons/back.png" /></a>
+  </div>
+</header>
+
+<main>
+  <div class="itemList">
+    <span>Id do Usuário: </span> <span>{{ model?.userId }}</span>
+  </div>
+  <div class="itemList">
+    <span>Id: </span> <span>{{ model?.id }}</span>
+  </div>
+  <div class="itemList">
+    <span>Título: </span> <span>{{ model?.title }}</span>
+  </div>
+  <div class="itemList">
+    <span>Completo: </span> <span>{{ model?.completed }}</span>
+  </div>
+</main>

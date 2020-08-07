@@ -24,11 +24,7 @@ export class CreateComponent implements OnInit {
 
   submit() {
     if (this.form.valid) {
-      let model: Model = new Model();
-      model.userId = this.form.get('userId').value;
-      model.title = this.form.get('title').value;
-      model.completed = this.form.get('completed').value;
-      console.log(model);
+      let model = this.form.getRawValue() as Model;      
       this.service.create(model).subscribe(
         (data) => {
           alert('Registro' + data.id + 'criado com sucesso!');

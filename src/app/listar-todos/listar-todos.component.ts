@@ -16,6 +16,7 @@ export class ListarTodosComponent implements OnInit {
   ngOnInit(): void {
     this.listar();
   }
+
   listar() {
     this.service.listar().subscribe(
       (data) => {
@@ -26,5 +27,9 @@ export class ListarTodosComponent implements OnInit {
         console.log(error);
       }
     );
+  }
+
+  setaCorDoStatusNaTabela(completed){
+    return completed ? '../assets/icons/check.png' : '../assets/icons/close.png'; 
   }
 }
